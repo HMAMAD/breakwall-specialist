@@ -26,12 +26,14 @@ export function SiteHeader() {
       <div className="mx-auto flex h-[70px] max-w-[1440px] items-center gap-9 px-4 md:h-[84px] md:px-[4vw]">
         <a
           href="#top"
-          aria-label="Breakwall Specialists home"
+          aria-label="Breakwall Specialists home — back to top"
           className="flex items-center gap-3 font-display font-extrabold leading-[0.88] tracking-[0.06em]"
         >
-          <span className="grid size-[42px] place-items-center rounded-full border border-white/55 text-sm">
-            BS
-          </span>
+          <img
+            src="/assets/breakwall-logo.png"
+            alt="Breakwall Specialists logo"
+            className="size-[42px] rounded-full object-cover"
+          />
           <span className="hidden text-lg sm:block">
             BREAKWALL
             <small className="block text-[0.7em] font-semibold tracking-[0.24em]">
