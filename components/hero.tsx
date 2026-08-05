@@ -36,13 +36,13 @@ export function Hero() {
       >
         {/* Mobile background */}
         <div
-          className="absolute inset-0 bg-[length:100%_auto] bg-top bg-no-repeat md:hidden"
-          style={{ backgroundImage: `url('${asset('/assets/breakwall-mobile-hero.jpg')}')` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+          style={{ backgroundImage: `url('${asset('/assets/hero-mobile.jpg')}')` }}
         />
         {/* Desktop background */}
         <div
           className="absolute inset-0 hidden bg-cover bg-center md:block"
-          style={{ backgroundImage: `url('${asset('/assets/breakwall-desktop-hero.png')}')` }}
+          style={{ backgroundImage: `url('${asset('/assets/hero-desktop.jpg')}')` }}
         />
       </div>
       {/* Shade overlays */}
