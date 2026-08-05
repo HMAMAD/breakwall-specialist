@@ -1,3 +1,5 @@
+import { asset } from '@/lib/base-path'
+
 const steps = [
   {
     number: '01',
@@ -25,7 +27,10 @@ export function Process() {
   return (
     <section
       id="process"
-      className="bg-[linear-gradient(rgba(3,20,34,.92),rgba(3,20,34,.96)),url('/assets/breakwall-mobile-hero.jpg')] bg-cover bg-center px-5 py-[75px] text-white md:px-[5vw] md:py-[110px]"
+      className="bg-cover bg-center px-5 py-[75px] text-white md:px-[5vw] md:py-[110px]"
+      style={{
+        backgroundImage: `linear-gradient(rgba(3,20,34,.92),rgba(3,20,34,.96)),url('${asset('/assets/breakwall-mobile-hero.jpg')}')`,
+      }}
     >
       <div className="mx-auto mb-9 max-w-[850px] text-center md:mb-14">
         <span className="text-xs font-extrabold uppercase tracking-[0.17em] text-primary">

@@ -1,3 +1,5 @@
+import { asset } from '@/lib/base-path'
+
 export function ProjectBand() {
   return (
     <section
@@ -31,7 +33,7 @@ export function ProjectBand() {
           Metal Breakwall System
         </div>
         <img
-          src="/assets/breakwall-mobile-hero.jpg"
+          src={asset('/assets/breakwall-mobile-hero.jpg')}
           alt="Metal breakwall with waves crashing against it"
           className="absolute size-full object-cover object-[center_45%]"
         />
