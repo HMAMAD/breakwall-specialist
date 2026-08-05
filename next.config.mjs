@@ -2,7 +2,7 @@
 
 // Repo name — the site is served from https://<user>.github.io/<repo>/ on GitHub Pages,
 // so assets and links need this prefix in production. Local `next dev` uses no prefix.
-const repo = 'breakwall-specialists'
+const repo = 'breakwall-specialist'
 const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
