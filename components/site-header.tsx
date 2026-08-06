@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { ArrowUp, Menu, X } from 'lucide-react'
+import { asset } from '@/lib/base-path'
 
 const navLinks = [
   { href: '#services', label: 'Services' },
@@ -37,7 +38,7 @@ export function SiteHeader() {
       }}
     >
       <div className="mx-auto flex h-[70px] max-w-[1440px] items-center gap-9 px-4 md:h-[84px] md:px-[4vw]">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <button
             type="button"
             onClick={scrollToTop}
@@ -50,12 +51,20 @@ export function SiteHeader() {
           >
             <ArrowUp className="size-5" />
           </button>
-          <span className="hidden font-display text-lg font-extrabold leading-[0.88] tracking-[0.06em] sm:block">
-            BREAKWALL
-            <small className="block text-[0.7em] font-semibold tracking-[0.24em]">
-              SPECIALISTS
-            </small>
-          </span>
+
+          {/* Mobile: logo home button (hamburger sits on the right) */}
+          <button
+            type="button"
+            onClick={scrollToTop}
+            aria-label="Breakwall Specialists home"
+            className="flex items-center rounded-md bg-white p-1 shadow-[0_4px_14px_rgba(0,0,0,0.25)] lg:hidden"
+          >
+            <img
+              src={asset('/assets/logo.png')}
+              alt="Breakwall Specialists"
+              className="h-9 w-auto"
+            />
+          </button>
         </div>
 
         <nav
@@ -75,10 +84,24 @@ export function SiteHeader() {
 
         <a
           href="#contact"
-          className="ml-auto hidden rounded-[5px] bg-primary px-5 py-3 text-xs font-extrabold uppercase tracking-[0.05em] text-primary-foreground transition-colors hover:bg-accent lg:ml-0 lg:inline-flex"
+          className="hidden rounded-[5px] bg-primary px-5 py-3 text-xs font-extrabold uppercase tracking-[0.05em] text-primary-foreground transition-colors hover:bg-accent lg:inline-flex"
         >
           Free Estimate
         </a>
+
+        {/* Desktop: logo home button in the top-right corner */}
+        <button
+          type="button"
+          onClick={scrollToTop}
+          aria-label="Breakwall Specialists home"
+          className="hidden items-center rounded-lg bg-white p-1.5 shadow-[0_6px_18px_rgba(0,0,0,0.28)] transition-transform duration-300 hover:scale-105 lg:flex"
+        >
+          <img
+            src={asset('/assets/logo.png')}
+            alt="Breakwall Specialists"
+            className="h-12 w-auto"
+          />
+        </button>
 
         <button
           type="button"
