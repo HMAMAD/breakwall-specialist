@@ -34,10 +34,13 @@ export function Hero() {
         aria-label="Metal breakwall protecting a shoreline from crashing waves"
         className="absolute inset-0 bg-navy-deep"
       >
-        {/* Mobile background */}
+        {/* Mobile background — shifted right so the logo (upper-left of the image) isn't cropped */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
-          style={{ backgroundImage: `url('${asset('/assets/hero-mobile.jpg')}')` }}
+          className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
+          style={{
+            backgroundImage: `url('${asset('/assets/hero-mobile.jpg')}')`,
+            backgroundPosition: '20% center',
+          }}
         />
         {/* Desktop background */}
         <div
